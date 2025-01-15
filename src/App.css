@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.mynav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px
+}
+.myinvoice {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
