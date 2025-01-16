@@ -3,7 +3,7 @@ import { IFResponse } from "../types/interface";
 const getList = async (str: string, page = 1): Promise<IFResponse | null> => {
   if (!str) return null;
   const response = await fetch(
-    `https://rickandmortyapi.com/api/character/?page=${page}&status=${str}`
+    `https://rickandmortyapi.com/api/character/?page=${page}&size=5&status=${str}`
   );
   if (response.status === 200) {
     const data = await response.json();
