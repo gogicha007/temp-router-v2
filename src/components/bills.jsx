@@ -1,11 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getInvoice } from './data';
 
 
 const Bills = () => {
+  const navigate = useNavigate()
   let params = useParams();
-  console.log(parseInt(params.invoiceId))
   let invoice = getInvoice(parseInt(params.invoiceId));
 
   return (
@@ -13,6 +13,7 @@ const Bills = () => {
       <h2>Total Due: {invoice.amount}</h2>
       <p>{invoice.name}:{invoice.number}</p>
       <p>Due Date: {invoice.due}</p>
+      <button onClick={()=>navigate('/invoices')}>Go back</button>
     </main>
   );
 };
