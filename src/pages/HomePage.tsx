@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate()
   return (
     <div className="container mx-auto">
       <nav className="bg-gray-100 flex gap-4 mynav">
